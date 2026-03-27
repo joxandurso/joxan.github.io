@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Ton Prénom Nom] — Portfolio BTS SIO SISR</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── CURSOR ─────────────────────────────────────────────── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="bracket">[</span>
+      <span class="logo-text">SISR</span>
+      <span class="bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#stages">Stages</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ───────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="dot"></span> Étudiant BTS SIO — option SISR
+      </p>
+      <h1 class="hero-title">
+        <span class="line line-1">[Ton Prénom]</span>
+        <span class="line line-2">[Ton Nom]</span>
+      </h1>
+      <p class="hero-subtitle">
+        Futur administrateur systèmes &amp; réseaux<br />
+        passionné par l'infra, la cybersécurité et l'open-source.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">bash ~ portfolio</span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="t-prompt">$</span> whoami</p>
+        <p class="t-output">[Ton Prénom Nom] — BTS SIO SISR</p>
+        <p><span class="t-prompt">$</span> cat skills.txt</p>
+        <p class="t-output">Réseaux · Linux · Windows Server</p>
+        <p class="t-output">Virtualisation · Cybersécurité</p>
+        <p><span class="t-prompt">$</span> echo $STATUS</p>
+        <p class="t-output t-green">Disponible pour alternance / stage</p>
+        <p><span class="t-prompt t-blink">$</span> <span class="cursor-blink">_</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── À PROPOS ────────────────────────────────────────────── -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label">
+        <span class="bracket">//</span> 01 — À propos
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <div class="about-photo-placeholder">
+            <!-- Remplace ce bloc par : <img src="photo.jpg" alt="Photo de profil" /> -->
+            <div class="photo-placeholder-inner">
+              <i class="fa-solid fa-user"></i>
+              <p>Ta photo ici</p>
+            </div>
+          </div>
+          <div class="about-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>BTS SIO SISR<br />[Année — Année]</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>Qui suis-je ?</h2>
+          <p class="about-intro">
+            <!-- Remplace ce texte par ta présentation personnelle -->
+            Je m'appelle <strong>[Ton Prénom Nom]</strong>, étudiant en
+            BTS SIO option SISR au <strong>[Nom de ton établissement]</strong>.
+            Passionné par les réseaux et l'administration système, je cherche
+            à construire une solide expertise dans les infrastructures IT.
+          </p>
+          <p>
+            <!-- Ajoute ici quelques lignes sur tes motivations, ta personnalité, tes passions en dehors de l'informatique... -->
+            [Parle ici de tes motivations, de ce qui t'a amené à choisir l'option SISR,
+            de tes projets professionnels, etc.]
+          </p>
+          <div class="about-infos">
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>[Ta Ville, Région]</span>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-school"></i>
+              <span>[Nom de ton lycée / BTS]</span>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-calendar"></i>
+              <span>Promo [Année de diplôme]</span>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-language"></i>
+              <span>Français natif · Anglais [niveau]</span>
+            </div>
+          </div>
+          <a href="[LIEN_TON_CV.pdf]" class="btn btn-primary" target="_blank">
+            <i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COMPÉTENCES ─────────────────────────────────────────── -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label">
+        <span class="bracket">//</span> 02 — Compétences
+      </div>
+      <h2 class="section-title">Stack technique</h2>
+
+      <div class="skills-categories">
+
+        <!-- Systèmes & Serveurs -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-server"></i> Systèmes &amp; Serveurs</h3>
+          <div class="skill-tags">
+            <span class="tag">Windows Server [version]</span>
+            <span class="tag">Debian / Ubuntu</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">DNS / DHCP</span>
+            <span class="tag">IIS / Apache / Nginx</span>
+            <!-- Ajoute / supprime des tags selon tes compétences réelles -->
+          </div>
+        </div>
+
+        <!-- Réseaux -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-network-wired"></i> Réseaux</h3>
+          <div class="skill-tags">
+            <span class="tag">TCP/IP</span>
+            <span class="tag">VLAN</span>
+            <span class="tag">Routage (OSPF / RIP)</span>
+            <span class="tag">VPN (OpenVPN / WireGuard)</span>
+            <span class="tag">Cisco / Packet Tracer</span>
+            <!-- Ajoute tes connaissances réseau -->
+          </div>
+        </div>
+
+        <!-- Virtualisation -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-cubes"></i> Virtualisation &amp; Cloud</h3>
+          <div class="skill-tags">
+            <span class="tag">VirtualBox</span>
+            <span class="tag">VMware</span>
+            <span class="tag">Proxmox</span>
+            <span class="tag">Docker</span>
+            <!-- Ajoute selon tes connaissances -->
+          </div>
+        </div>
+
+        <!-- Sécurité -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-shield-halved"></i> Cybersécurité</h3>
+          <div class="skill-tags">
+            <span class="tag">Pare-feu (pfSense / iptables)</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Nmap</span>
+            <span class="tag">RGPD</span>
+            <!-- Ajoute tes connaissances en sécu -->
+          </div>
+        </div>
+
+        <!-- Scripting -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-terminal"></i> Scripting &amp; Dev</h3>
+          <div class="skill-tags">
+            <span class="tag">Bash</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">Python (bases)</span>
+            <span class="tag">HTML / CSS</span>
+            <!-- Ajoute selon ce que tu sais faire -->
+          </div>
+        </div>
+
+        <!-- Outils -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Outils &amp; Méthodes</h3>
+          <div class="skill-tags">
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">GLPI</span>
+            <span class="tag">Ticketing</span>
+            <span class="tag">Méthode ITIL</span>
+            <!-- Ajoute selon tes outils -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJETS ──────────────────────────────────────────────── -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="bracket">//</span> 03 — Projets
+      </div>
+      <h2 class="section-title">Mes réalisations</h2>
+      <p class="section-subtitle">
+        Projets réalisés en cours, en atelier professionnel ou en autonomie.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- Projet 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-number">01</span>
+            <div class="project-links">
+              <!-- Remplace # par le lien GitHub ou la doc -->
+              <a href="#" title="Code source" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Documentation" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
+            </div>
+          </div>
+          <h3>[Nom du projet 1]</h3>
+          <p>
+            <!-- Décris le projet : objectif, contexte, ce que tu as fait -->
+            [Description du projet : ex. Mise en place d'un serveur DHCP/DNS
+            sous Debian dans un environnement de TP virtualisé. Configuration
+            des plages d'adresses, des baux statiques et des zones DNS directes
+            et inversées.]
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-sm">[Techno 1]</span>
+            <span class="tag tag-sm">[Techno 2]</span>
+            <span class="tag tag-sm">[Techno 3]</span>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-number">02</span>
+            <div class="project-links">
+              <a href="#" title="Code source" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Documentation" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
+            </div>
+          </div>
+          <h3>[Nom du projet 2]</h3>
+          <p>
+            [Description du projet 2 — ex. Déploiement d'une infrastructure
+            Active Directory avec GPO, gestion des utilisateurs et des droits
+            d'accès sous Windows Server.]
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-sm">[Techno 1]</span>
+            <span class="tag tag-sm">[Techno 2]</span>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-number">03</span>
+            <div class="project-links">
+              <a href="#" title="Code source" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Documentation" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
+            </div>
+          </div>
+          <h3>[Nom du projet 3]</h3>
+          <p>
+            [Description du projet 3 — ex. Mise en place d'un réseau simulé
+            avec Cisco Packet Tracer : routage inter-VLAN, configuration de
+            ACL et sécurisation des ports de commutateurs.]
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-sm">[Techno 1]</span>
+            <span class="tag tag-sm">[Techno 2]</span>
+          </div>
+        </article>
+
+        <!-- Ajoute autant de project-card que nécessaire -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STAGES ──────────────────────────────────────────────── -->
+  <section class="section stages" id="stages">
+    <div class="container">
+      <div class="section-label">
+        <span class="bracket">//</span> 04 — Expériences &amp; Stages
+      </div>
+      <h2 class="section-title">Parcours professionnel</h2>
+
+      <div class="timeline">
+
+        <!-- Stage / alternance 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">
+                <i class="fa-regular fa-calendar"></i>
+                [Mois Année] — [Mois Année]
+              </span>
+              <span class="timeline-badge">[Stage / Alternance]</span>
+            </div>
+            <h3>[Poste occupé — ex. Technicien réseau]</h3>
+            <p class="timeline-company">
+              <i class="fa-solid fa-building"></i>
+              [Nom de l'entreprise] · [Ville]
+            </p>
+            <ul class="timeline-tasks">
+              <li>[Tâche ou mission réalisée 1]</li>
+              <li>[Tâche ou mission réalisée 2]</li>
+              <li>[Tâche ou mission réalisée 3]</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage / alternance 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">
+                <i class="fa-regular fa-calendar"></i>
+                [Mois Année] — [Mois Année]
+              </span>
+              <span class="timeline-badge">[Stage / Alternance]</span>
+            </div>
+            <h3>[Poste occupé 2]</h3>
+            <p class="timeline-company">
+              <i class="fa-solid fa-building"></i>
+              [Nom de l'entreprise] · [Ville]
+            </p>
+            <ul class="timeline-tasks">
+              <li>[Tâche ou mission réalisée 1]</li>
+              <li>[Tâche ou mission réalisée 2]</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ajoute d'autres expériences si nécessaire -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─────────────────────────────────────────────── -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label">
+        <span class="bracket">//</span> 05 — Contact
+      </div>
+      <h2 class="section-title">Travaillons ensemble</h2>
+      <p class="section-subtitle">
+        Tu veux me contacter pour un stage, une alternance ou juste discuter tech ?
+        N'hésite pas !
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a href="mailto:[ton.email@exemple.com]" class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">[ton.email@exemple.com]</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/[ton-profil]" class="contact-card" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">[Ton Prénom Nom]</span>
+            </div>
+          </a>
+          <a href="https://github.com/[ton-username]" class="contact-card" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">@[ton-username]</span>
+            </div>
+          </a>
+          <!-- Ajoute d'autres liens si nécessaire (Discord, etc.) -->
+        </div>
+
+        <div class="contact-availability">
+          <div class="availability-card">
+            <div class="availability-dot"></div>
+            <div>
+              <h3>Disponibilité</h3>
+              <p>
+                <!-- Mets à jour selon ta situation -->
+                Actuellement disponible pour un <strong>stage</strong> ou une
+                <strong>alternance</strong> à partir de <strong>[Mois Année]</strong>.
+              </p>
+              <p class="availability-zone">
+                <i class="fa-solid fa-location-dot"></i>
+                Zone géographique : [Ville / Région / Télétravail]
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        © <span id="year"></span> — [Ton Prénom Nom] · Portfolio BTS SIO SISR
+      </p>
+      <p class="footer-made">
+        Fait avec <i class="fa-solid fa-heart"></i> et du HTML/CSS pur
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Année dynamique ──────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Navbar scroll ────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ── Menu mobile ──────────────────────────────────────────────
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+
+    // ── Smooth reveal on scroll ──────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(
+      '.project-card, .skill-category, .timeline-item, .contact-card, .about-grid'
+    ).forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+
+    // ── Custom cursor ────────────────────────────────────────────
+    const cursor      = document.getElementById('cursor');
+    const cursorTrail = document.getElementById('cursorTrail');
+    let trailX = 0, trailY = 0;
+
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
+    });
+
+    function animateTrail() {
+      const cur = cursor.getBoundingClientRect();
+      trailX += (cur.left - trailX) * 0.15;
+      trailY += (cur.top  - trailY) * 0.15;
+      cursorTrail.style.left = trailX + 'px';
+      cursorTrail.style.top  = trailY + 'px';
+      requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+
+    document.querySelectorAll('a, button, .project-card').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+  </script>
+</body>
+</html>
