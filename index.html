@@ -11,11 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
-  <!-- ─── CURSOR ─────────────────────────────────────────────── -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursorTrail"></div>
-
+ 
   <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
@@ -135,7 +131,7 @@
       <div class="section-label">
         <span class="bracket">//</span> 02 — Compétences
       </div>
-      <h2 class="section-title">Stack technique</h2>
+      <h2 class="section-title">truc Techniques</h2>
 
       <div class="skills-categories">
 
@@ -372,62 +368,41 @@
         <span class="bracket">//</span> 05 — Contact
       </div>
       <h2 class="section-title">Travaillons ensemble</h2>
-
-      <div class="contact-grid">
-        <div class="contact-links">
-          <a href="mailto:joxan.durso@gmail.com" class="contact-card">
-            <i class="fa-solid fa-envelope"></i>
-            <div>
-              <span class="contact-label">Email</span>
-              <span class="contact-value">joxan.durso@gmail.com</span>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/joxan-d-urso-0b7655375/" class="contact-card" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-            <div>
-              <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">Joxan D'urso</span>
-            </div>
-          </a>
-          <a href="https://github.com/joxandurso" class="contact-card" target="_blank">
-            <i class="fa-brands fa-github"></i>
-            <div>
-              <span class="contact-label">GitHub</span>
-              <span class="contact-value">@joxandurso</span>
-            </div>
-          </a>
-          <a href="https://discord.com/users/jox_mouske_chevre" class="contact-card" target="_blank">
-            <i class="fa-brands fa-discord"></i>
-            <div>
-              <span class="contact-label">Discord</span>
-              <span class="contact-value">@jox_mouske_chevre</span>
-            </div>
-          </a>
-          <!-- Ajoute d'autres liens si nécessaire (Discord, etc.) -->
-        </div>
-
-        <div class="contact-availability">
-          <div class="availability-card">
-            <div class="availability-dot"></div>
-            <div>
-              <h3>Disponibilité</h3>
-              <p>
-                <!-- Mets à jour selon ta situation -->
-                Actuellement disponible pour un <strong>stage</strong> ou une
-                <strong>alternance</strong> à partir de <strong>[Mois Année]</strong>.
-              </p>
-              <p class="availability-zone">
-                <i class="fa-solid fa-location-dot"></i>
-                Zone géographique : Alès et Nîmes
-              </p>
-            </div>
+      
+      <div class="contact-grid-4">
+        <a href="mailto:joxan.durso@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">joxan.durso@gmail.com</span>
           </div>
-        </div>
+        </a>
+        <a href="https://linkedin.com/in/joxan-d-urso-0b7655375/" class="contact-card" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Joxan D'urso</span>
+          </div>
+        </a>
+        <a href="https://github.com/joxandurso" class="contact-card" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">@joxandurso</span>
+          </div>
+        </a>
+        <a href="https://discord.com/users/jox_mouske_chevre" class="contact-card" target="_blank">
+          <i class="fa-brands fa-discord"></i>
+          <div>
+            <span class="contact-label">Discord</span>
+            <span class="contact-value">@jox_mouske_chevre</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
-
-  <!-- ─── FOOTER ──────────────────────────────────────────────── -->
+  
+   <!-- ─── FOOTER ──────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container footer-inner">
       <p class="footer-copy">
@@ -436,16 +411,16 @@
     </div>
   </footer>
 
-  <script>
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ── Année dynamique ──────────────────────────────────────────
     document.getElementById('year').textContent = new Date().getFullYear();
-
+ 
     // ── Navbar scroll ────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
-
+ 
     // ── Menu mobile ──────────────────────────────────────────────
     const toggle = document.getElementById('navToggle');
     const navLinks = document.querySelector('.nav-links');
@@ -459,7 +434,7 @@
         toggle.classList.remove('active');
       });
     });
-
+ 
     // ── Smooth reveal on scroll ──────────────────────────────────
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -469,38 +444,14 @@
         }
       });
     }, { threshold: 0.1 });
-
+ 
     document.querySelectorAll(
       '.project-card, .skill-category, .timeline-item, .contact-card, .about-grid'
     ).forEach(el => {
       el.classList.add('fade-up');
       observer.observe(el);
     });
-
-    // ── Custom cursor ────────────────────────────────────────────
-    const cursor      = document.getElementById('cursor');
-    const cursorTrail = document.getElementById('cursorTrail');
-    let trailX = 0, trailY = 0;
-
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top  = e.clientY + 'px';
-    });
-
-    function animateTrail() {
-      const cur = cursor.getBoundingClientRect();
-      trailX += (cur.left - trailX) * 0.15;
-      trailY += (cur.top  - trailY) * 0.15;
-      cursorTrail.style.left = trailX + 'px';
-      cursorTrail.style.top  = trailY + 'px';
-      requestAnimationFrame(animateTrail);
-    }
-    animateTrail();
-
-    document.querySelectorAll('a, button, .project-card').forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
+ 
   </script>
 </body>
 </html>
