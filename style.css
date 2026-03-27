@@ -42,41 +42,11 @@ body {
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none; /* custom cursor */
 }
 
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
-
-/* ─── CUSTOM CURSOR ─────────────────────────────────────────── */
-.cursor,
-.cursor-trail {
-  position: fixed;
-  top: 0; left: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width var(--transition), height var(--transition),
-              background var(--transition);
-}
-
-.cursor {
-  width: 10px; height: 10px;
-  background: var(--accent);
-}
-
-.cursor-trail {
-  width: 32px; height: 32px;
-  border: 1.5px solid var(--accent);
-  opacity: 0.45;
-}
-
-.cursor.hover {
-  width: 20px; height: 20px;
-  background: var(--accent-glow);
-}
 
 /* ─── CONTAINER ─────────────────────────────────────────────── */
 .container {
@@ -100,7 +70,7 @@ img { max-width: 100%; display: block; }
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-subtitle {
@@ -719,11 +689,10 @@ img { max-width: 100%; display: block; }
    ════════════════════════════════════════════════════════════════ */
 .contact { background: var(--bg-card); }
 
-.contact-grid {
+.contact-grid-4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  gap: 1rem;
 }
 
 .contact-links {
@@ -773,46 +742,9 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 
-.availability-card {
-  background: var(--bg-card-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-}
-
-.availability-dot {
-  width: 14px; height: 14px;
-  background: var(--green);
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 0.3rem;
-  animation: pulse 2s infinite;
-}
-
-.availability-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.availability-card p {
-  color: var(--text-dim);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
 .availability-zone {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  display: none;
 }
-.availability-zone i { color: var(--accent); }
 
 /* ════════════════════════════════════════════════════════════════
    FOOTER
@@ -866,7 +798,7 @@ img { max-width: 100%; display: block; }
 
   .about-badge { bottom: -0.5rem; right: -0.5rem; }
 
-  .contact-grid {
+  .contact-grid-4 {
     grid-template-columns: 1fr;
   }
 }
